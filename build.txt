@@ -1,0 +1,3 @@
+displayName = the favorite tooltip but worse
+author = patman
+version = 0.1
