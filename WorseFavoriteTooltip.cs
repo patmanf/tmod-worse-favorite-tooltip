@@ -23,12 +23,12 @@ internal class TooltipWorsener : GlobalItem
         for (int index = 0; index < tooltips.Count; index++)
         {
             Random rand = new(item.type + index);
-            int loops = rand.Next(1, 7);
+            int loops = rand.Next(1, 4);
 
             for (int i = 0; i < loops; i++)
             {
                 string text = "";
-                for (int t = 1; t <= rand.Next(1, 5); t++)
+                for (int t = 1; t <= rand.Next(1, 3); t++)
                 {
                     text += $"{(rand.Next(0, 2) % 2 == 0 ? Favorite : FavoriteDesc)}  ";
                 }
@@ -44,7 +44,7 @@ internal class TooltipWorsener : GlobalItem
     {
         Color a = Gay(i);
         Color b = Pronoun((int)i);
-        float r = Math.Abs(Main.GlobalTimeWrappedHourly * 0.667f % 2f - 1f);
+        float r = Math.Abs((Main.GlobalTimeWrappedHourly % 2f) - 1f);
         return Color.Lerp(a, b, r);
     }
 

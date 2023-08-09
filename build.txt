@@ -1,3 +1,5 @@
 displayName = the favorite tooltip but worse
 author = patman
-version = 0.1
+version = 1.0
+includeSource = true
+side = Client
